@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.headerContainer{
+    background-color: darkturquoise;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.logo{
+    width: 6%;
+    height: 80px;
+    border-radius: 50%;
+    margin: 5px 15px;
+}
+.navs ul{
+    display: flex;
+    gap: 70px;
+    font-size: 26px;
+    list-style: none;
+}
+.navs li:hover{
+    color: blue;
+}
+.btns{
+    border: none;
+    background-color: darkturquoise;
+    font-size: 22px;
+    margin: 20px;
+}
+.btns:hover{
+    color: blue;
+}
+
