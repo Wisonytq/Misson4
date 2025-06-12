@@ -1,16 +1,29 @@
 .heading{
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 .chatbox{
-  width: 600px;
-  height: 400px;
+  width: 700px;
+  height: 450px;
+  overflow-y: auto;
   margin: auto;
   margin-top: 30px;
   font-family: Arial;
   border: 2px solid black;
   padding: 10px;
+}
+.ai{
+    font-size: 18px;
+    color: darkturquoise;
+    margin: 10px 0;
+}
+.user{
+    font-size: 18px;
+    margin: 5px 0;
+}
+.names{
+    font-size: 20px;
 }
 .chatInput{
     display: flex;
@@ -19,7 +32,7 @@
 }
 .userInput{
     font-size: 16px;
-    width: 480px;
+    width: 580px;
     padding: 10px;
     border: 1px solid black;
 }

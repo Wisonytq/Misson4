@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./Back-end
+      dockerfile: Dockerfile  # Optional if your Dockerfile is named differently
+    container_name: tina-backend
+    ports:
+      - "5000:3000"           # Maps container 5000 to host 5000
+    env_file:
+      - ./Back-end/.env       # Loads your environment variables
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./Front-end/vite-project
+      dockerfile: Dockerfile  # If you have a Dockerfile here
+    container_name: tina-frontend
+    ports:
+      - "3000:80"             # Maps container port 80 (nginx) to host 3000
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
